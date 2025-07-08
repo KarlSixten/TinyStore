@@ -1,0 +1,22 @@
+{
+  "name": "tinystore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karlsixten/tinystore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karlsixten/tinystore/issues"
+  },
+  "homepage": "https://github.com/karlsixten/tinystore#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
