@@ -3,18 +3,21 @@ import products from '../products.js';
 
 const router = Router();
 
-products.forEach(product => {
-    console.log(product.name);
-});
-
 router.get('/popular', async (req, res) => {
-    const limit = parseInt(req.query.limit) || 3;
+    const limit = Number(req.query.limit) || 3;
 
-    const trendingProducts = products
+    const trendingProducts = [...products]
         .sort((a, b) => b.popularity - a.popularity)
         .slice(0, limit);
 
-    res.send({ data: trendingProducts });
+    return res.send({ data: trendingProducts });
 })
+
+router.get('/random', (req, res) => {
+
+    const randomProduct = products[Math.floor(Math.random() * products.length)];
+
+    return res.send({ data: randomProduct })
+});
 
 export default router;
